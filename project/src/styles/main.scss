@@ -1,0 +1,180 @@
+// Variables
+$primary-bg: #0e2525;
+$secondary-bg: #1a4040;
+$accent-color: #a1e5e5;
+$text-primary: #f0f5f5;
+$text-secondary: #b0c5c5;
+$border-color: #294e4e;
+$input-bg: #213d3d;
+$button-bg: #0b1c1c;
+
+// Global styles
+body {
+  font-family: Arial, sans-serif;
+  background-color: $primary-bg;
+  color: $text-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  background-color: $secondary-bg;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+// Header styles
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  .logo {
+    color: $accent-color;
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    margin: 0;
+  }
+}
+
+// Progress bar styles
+.progress-bar {
+  height: 5px;
+  width: 100%;
+  background-color: $border-color;
+  margin-bottom: 2rem;
+  border-radius: 3px;
+  overflow: hidden;
+
+  .progress {
+    height: 100%;
+    background-color: $accent-color;
+    transition: width 0.3s ease;
+  }
+}
+
+// Content styles
+.content {
+  text-align: center;
+  margin-bottom: 2rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 1.5rem;
+  }
+
+  .form {
+    .input-field {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+      background-color: $input-bg;
+      color: $text-primary;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+
+      &::placeholder {
+        color: darken($text-secondary, 20%);
+      }
+
+      &:focus {
+        outline: none;
+        border-color: $accent-color;
+      }
+    }
+  }
+}
+
+// Footer styles
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+
+  .navigation {
+    display: flex;
+    gap: 1rem;
+  }
+
+  button {
+    background-color: $button-bg;
+    color: $accent-color;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: lighten($button-bg, 10%);
+    }
+  }
+
+  .auto-save {
+    color: $text-secondary;
+    font-size: 0.875rem;
+  }
+}
+
+// Upload styles
+.upload-container {
+  text-align: center;
+  padding: 2rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    color: $text-secondary;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.upload-box {
+  border: 2px dashed $border-color;
+  border-radius: 8px;
+  padding: 3rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &.dragging {
+    border-color: $accent-color;
+    background-color: rgba($accent-color, 0.1);
+  }
+
+  .upload-icon {
+    color: $accent-color;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.upload-link {
+  color: $accent-color;
+  text-decoration: underline;
+  
+  &:hover {
+    color: lighten($accent-color, 10%);
+  }
+}
